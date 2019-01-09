@@ -22,7 +22,7 @@ class PagesController extends Controller
      */
     public function index()
     {
-        $pages = Pages::orderBy('id', 'DESC')->paginate(2);
+        $pages = Pages::orderBy('id', 'DESC')->paginate(10);
 
         return view('pages.index', compact('pages'));
 
