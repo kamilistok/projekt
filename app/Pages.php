@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Pages extends Model
 {
     protected  $fillable = [
-        'title', 'content'
+        'name', 'lastName', 'ZIPcode', 'city', 'street', 'buildingNumber', 'phoneNumber'
     ];
 }

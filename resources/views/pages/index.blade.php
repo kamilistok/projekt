@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <a class="btn btn-primary" href="{{route('pages.create')}}">Dodaj stronę</a>
+    <a class="btn btn-primary" href="{{route('pages.create')}}">Dodaj pacjenta</a>
 
     <table class="table table-hover">
         <tr>
@@ -13,8 +13,8 @@
             <th>Ulica</th>
             <th>Numer domu</th>
             <th>Numer telefonu</th>
-            <th>EDIT</th>
-            <th>DELETE</th>
+            <th>OPCJE</th>
+
         </tr>
     @foreach($pages as $page)
         <tr>
@@ -26,10 +26,10 @@
             <td>{{ $page->street }}</td>
             <td>{{ $page->buildingNumber }}</td>
             <td>{{ $page->phoneNumber }}</td>
-            <td><a class="btn btn-info" href="{{route('pages.edit', $page)}}">Edit</a> </td>
+            <td><a class="btn btn-info" href="{{route('pages.edit', $page)}}">Edytuj</a> </td>
             <td>
                 {!! Form::model($page, ['route'=> ['pages.delete', $page], 'method' => 'DELETE']) !!}
-                <button class="btn btn-danger" >Delete</button>
+                <button class="btn btn-danger" >Usuń</button>
                 {!! Form::close() !!}
             </td>
         </tr>
