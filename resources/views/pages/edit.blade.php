@@ -38,6 +38,8 @@
         {!! Form::text('street', $page->street, ['class'=>'form-control']) !!}
     </div>
 
+
+
     <div class="form-group">
         {!! Form::label('buildingNumber', "Numer budynku:") !!}
         {!! Form::text('buildingNumber', $page->buildingNumber, ['class'=>'form-control']) !!}
