@@ -3,8 +3,17 @@
 @section('content')
 
     <br>
+
+
     <br>
     <br>
+
+    <div class="content">
+        <div class="title m-b-md">
+            <center>    <font size="26"> RejestrPol </font> </center>
+        </div>
+    </div>
+
     <br>
     <br>
     <br>
@@ -20,8 +29,8 @@
             <th>Ulica</th>
             <th>Numer domu</th>
             <th>Numer telefonu</th>
-            <th>EDIT</th>
-            <th>DELETE</th>
+            <th>Edycja</th>
+            <th>Usuń</th>
         </tr>
         @foreach($pages as $page)
             <tr>
@@ -47,6 +56,10 @@
 
     <center>
     <a class="btn btn-primary" align="right" href="{{route('pages.create')}}">  Dodaj Osobę</a>
+    </center>
+    <br>
+    <center>
+        <a class="btn btn-primary" href="{{route('home')}}">  Powrót</a>
     </center>
     {{$pages->links()}}
 

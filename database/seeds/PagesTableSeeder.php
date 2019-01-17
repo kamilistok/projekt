@@ -16,13 +16,13 @@ class PagesTableSeeder extends Seeder
 
         for($i = 0; $i < 30; $i++) {
             $page = new Pages();
-            $page->ZIPcode = $faker->randomNumber($nbDigits = NULL, $strict = false);
             $page->name = $faker->firstNameMale;
             $page->lastName = $faker->lastName;
+            $page->ZIPcode = $faker->numberBetween($min = 000001, $max = 999999);
             $page->city = $faker->city;
             $page->street = $faker->streetName;
-            $page->buildingNumber = $faker->buildingNumber;
-            $page->phoneNumber = $faker->phoneNumber;
+            $page->buildingNumber = $faker->numberBetween($min = 1, $max = 150);
+            $page->phoneNumber = $faker->numberBetween($min = 600000000, $max = 999999999);
             $page->save();
         }
     }
