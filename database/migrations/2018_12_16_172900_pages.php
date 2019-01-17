@@ -15,14 +15,13 @@ class Pages extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('idnumber', 11);
+            $table->string('ZIPcode', 11);
             $table->string('name');
-            $table->string('lastname');
+            $table->string('lastName');
             $table->string('city');
             $table->string('street');
-            $table->string('housenumber');
-            $table->string('ZIPcode', 11);
-            $table->string('phonenumber');
+            $table->string('buildingNumber');
+            $table->string('phoneNumber');
            // $table->string('maindoctor');
             $table->timestamps();
         });

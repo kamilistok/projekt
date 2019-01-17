@@ -14,13 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
 Route::group([
     'middleware' =>'roles',
-    'roles' => 'Admin'
+    'roles' => ['Admin']
 ], function() {
     Route::get('pages', ['uses' => 'PagesController@index',
-    'as' => 'pages.index'
+        'as' => 'pages.index'
     ]);
 
     Route::get('pages/create', [
@@ -46,10 +45,9 @@ Route::group([
     Route::delete('pages/{page}', [
         'uses' => 'PagesController@destroy',
         'as' => 'pages.delete'
-        ]);
+    ]);
 
 });
-
 
 Auth::routes();
 
